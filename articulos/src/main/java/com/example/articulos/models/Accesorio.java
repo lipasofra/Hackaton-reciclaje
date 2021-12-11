@@ -4,6 +4,7 @@ import org.springframework.data.annotation.Id;
 import java.util.Date;
 public class Accesorio {
     @Id
+    private String id;
     private String nombre;
     private Integer peso;
     private String estado;
@@ -11,13 +12,20 @@ public class Accesorio {
     private String nombrePersona;
     private String telefono;
 
-    public Accesorio(String nombre, Integer peso, String estado, String direccion, String nombrePersona, String telefono) {
+    public Accesorio(String id, String nombre, Integer peso, String estado, String direccion, String nombrePersona,
+                     String telefono) {
+        this.id= id;
         this.nombre = nombre;
         this.peso = peso;
         this.estado = estado;
         this.direccion = direccion;
         this.nombrePersona = nombrePersona;
         this.telefono = telefono;
+    }
+
+
+    public String getId() {
+        return id;
     }
     public String getNombre() {
         return nombre;
