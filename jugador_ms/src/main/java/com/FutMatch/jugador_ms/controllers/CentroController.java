@@ -1,9 +1,10 @@
 package com.FutMatch.jugador_ms.controllers;
 
-import com.FutMatch.jugador_ms.exceptions.JugadorNotFoundException;
 import com.FutMatch.jugador_ms.models.Centro;
 import com.FutMatch.jugador_ms.repositories.CentroRepository;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class CentroController {
@@ -15,12 +16,24 @@ public class CentroController {
     }
 
     @GetMapping("/centro/{zona}")
-    Centro getCentro(@PathVariable String zona){
-        return centroRepository.findById(zona)
-                .orElseThrow(() -> new JugadorNotFoundException("No se encontró un jugador con el nombre: " + nombre));
+    List<Centro> getCentroZona(@PathVariable String zona){
+
+        List<Centro> centrosZona = centroRepository.findByZona(zona);
+
+        return centrosZona;
+
     }
 
-    @PostMapping("/ciudadano")
+    @GetMapping("/centros")
+    List<Centro> getCentros(){
+
+        List<Centro> centrosTodos = centroRepository.findAll();
+
+        return centrosTodos;
+
+    }
+
+    @PostMapping("/centro")
     Centro newCentro(@RequestBody Centro centro){
         return centroRepository.save(centro);
     }

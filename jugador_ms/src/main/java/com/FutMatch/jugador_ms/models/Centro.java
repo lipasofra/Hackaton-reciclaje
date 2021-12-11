@@ -5,10 +5,10 @@ import org.springframework.data.annotation.Id;
 public class Centro {
 
     @Id
-    private String nombreJefe;
-    private String zona;
     private String direccion;
     private String telefono;
+    private String zona;
+    private String nombreJefe;
 
     public Centro(String nombreJefe, String zona, String direccion, String telefono) {
         this.nombreJefe = nombreJefe;
