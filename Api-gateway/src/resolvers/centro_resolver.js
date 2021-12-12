@@ -11,7 +11,7 @@ const centroResolver = {
         centroTodos: async (_, { }, { dataSources, userIdToken }) => {
             usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
             if (usernameToken)
-                return dataSources.recicladorAPI.centroTodos()
+                return dataSources.centroAPI.centroTodos()
             else
                 return null
 

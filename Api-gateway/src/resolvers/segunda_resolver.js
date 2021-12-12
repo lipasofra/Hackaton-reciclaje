@@ -8,7 +8,7 @@ const segundaResolver = {
                 return null
 
         },
-        articuloById: async (_, { Id }, { dataSources, userIdToken }) => {
+        articuloById: async (_, { id }, { dataSources, userIdToken }) => {
             usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
             if (usernameToken)
                 return dataSources.segundaAPI.articuloById(id)

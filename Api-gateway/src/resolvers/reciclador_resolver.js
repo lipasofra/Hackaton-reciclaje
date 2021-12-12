@@ -11,7 +11,7 @@ const recicladorResolver = {
         recicladorByMaterial: async (_, { material }, { dataSources, userIdToken }) => {
             usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
             if (usernameToken)
-                return dataSources.recicladorAPI.recicladorByMateria(material)
+                return dataSources.recicladorAPI.recicladorByMaterial(material)
             else
                 return null
 
