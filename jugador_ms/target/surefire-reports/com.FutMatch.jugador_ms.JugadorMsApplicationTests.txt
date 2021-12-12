@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.FutMatch.jugador_ms.JugadorMsApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.628 s - in com.FutMatch.jugador_ms.JugadorMsApplicationTests
