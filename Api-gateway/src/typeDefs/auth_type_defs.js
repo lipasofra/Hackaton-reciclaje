@@ -38,6 +38,7 @@ const authTypeDefs = gql`
         telefono: String!
         zona: String!
         nombreJefe: String!
+        email: String!
            
     }
     type UserDetail {

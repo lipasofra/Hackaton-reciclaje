@@ -48,12 +48,13 @@ const usersResolver = {
                 telefono: centroInput.telefono,
                 zona: centroInput.zona,
                 nombreJefe: centroInput.nombreJefe,
+                
             }
             await dataSources.centroAPI.createCentro(centroInfo);
             const authInput = {
                 username: centroInput.username,
                 password: centroInput.password,
-                name: centroInput.nombre,
+                name: centroInput.direccion,
                 email: centroInput.email,
             }
             return await dataSources.authAPI.createUser(authInput);

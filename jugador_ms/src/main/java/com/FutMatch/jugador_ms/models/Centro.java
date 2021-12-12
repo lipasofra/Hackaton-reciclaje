@@ -9,12 +9,14 @@ public class Centro {
     private String telefono;
     private String zona;
     private String nombreJefe;
+    private String email;
 
-    public Centro(String nombreJefe, String zona, String direccion, String telefono) {
+    public Centro(String nombreJefe, String zona, String direccion, String telefono, String email) {
         this.nombreJefe = nombreJefe;
         this.zona = zona;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.email= email;
     }
 
     public String getNombreJefe() {
@@ -47,5 +49,13 @@ public class Centro {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -5,13 +5,15 @@ const centroTypeDefs = gql `
         direccion: String!
         telefono: String!
         zona: String!
-        nombreJefe: String!        
+        nombreJefe: String!
+                
     }
     input CentroInput {
         direccion: String!
         telefono: String!
         zona: String!
         nombreJefe: String!
+        
       
     }
     extend type Query {
