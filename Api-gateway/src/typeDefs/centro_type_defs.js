@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server');
-const recicladorTypeDefs = gql `
+
+const centroTypeDefs = gql `
     type Centro {
         direccion: String!
         telefono: String!
@@ -15,7 +16,7 @@ const recicladorTypeDefs = gql `
     }
     extend type Query {
         centroByZona(zona: String!): [Centro]!
-        centroTodos(): [Centro]!
+        centroTodos(zona: String): [Centro]!
     }
     extend type Mutation {
         createCentro(centro: CentroInput!): Centro!

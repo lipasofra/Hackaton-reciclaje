@@ -13,4 +13,4 @@ class CiudadanoAPI extends RESTDataSource {
     
     
 }
-module.exports = CiudadanooAPI;
+module.exports = CiudadanoAPI;

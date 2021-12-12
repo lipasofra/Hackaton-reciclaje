@@ -9,17 +9,52 @@ const usersResolver = {
         },
     },
     Mutation: {
-        signUpUser: async (_, { userInput }, { dataSources }) => {
-            const jugadorInput = {
-                nombre: userInput.name,
-                edad: userInput.edad 
+        signUpCiudadano: async (_, { ciudadanoInput }, { dataSources }) => {
+            const ciudadanoInfo = {
+                nombre: ciudadanoInput.nombre,
+                telefono: ciudadanoInput.telefono,
+                email: ciudadanoInput.email,
+                zona: ciudadanoInput.zona,
             }
-            await dataSources.jugadorAPI.createJugador(jugadorInput);
+            await dataSources.ciudadanoAPI.createCiudadano(ciudadanoInfo);
             const authInput = {
-                username: userInput.username,
-                password: userInput.password,
-                name: userInput.name,
-                email: userInput.email,
+                username: ciudadanoInput.username,
+                password: ciudadanoInput.password,
+                name: ciudadanoInput.nombre,
+                email: ciudadanoInput.email,
+            }
+            return await dataSources.authAPI.createUser(authInput);
+        },
+        signUpReciclador: async (_, { recicladorInput }, { dataSources }) => {
+            const recicladorInfo = {
+                nombre: recicladorInput.nombre,
+                telefono: recicladorInput.telefono,
+                email: recicladorInput.email,
+                zona: recicladorInput.zona,
+                material: recicladorInput.material,
+            }
+            await dataSources.recicladorAPI.createReciclador(recicladorInfo);
+            const authInput = {
+                username: recicladorInput.username,
+                password: recicladorInput.password,
+                name: recicladorInput.nombre,
+                email: recicladorInput.email,
+            }
+            return await dataSources.authAPI.createUser(authInput);
+        },
+        signUpCentro: async (_, { centroInput }, { dataSources }) => {
+            const centroInfo = {
+                direccion: centroInput.direccion,
+                telefono: centroInput.telefono,
+                zona: centroInput.zona,
+                nombreJefe: centroInput.nombreJefe,
+            }
+            await dataSources.centroAPI.createCentro(centroInfo);
+            const authInput = {
+                username: centroInput.username,
+                password: centroInput.password,
+                name: centroInput.nombre,
+                email: centroInput.email,
             }
             return await dataSources.authAPI.createUser(authInput);
         },

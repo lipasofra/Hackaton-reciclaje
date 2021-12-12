@@ -15,7 +15,7 @@ const ciudadanoTypeDefs = gql `
       
     }
     extend type Mutation {
-        createCiudadano(ciudadano: CiudadanoInput!): Reciclador!
+        createCiudadano(ciudadano: CiudadanoInput!): Ciudadano!
     }
 `;
 module.exports = ciudadanoTypeDefs;

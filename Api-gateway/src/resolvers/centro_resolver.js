@@ -16,19 +16,10 @@ const centroResolver = {
                 return null
 
         },
-    },
-    Mutation: {
-        createCentro: async (_, { centro }, { dataSources, userIdToken }) => {
-            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
-            if (usernameToken)
-                return dataSources.recicladorAPI.createCentro(centro)
-            else
-                return null
-        }
+    }
 
 
 
-        }
-    
+           
 };
 module.exports = centroResolver;

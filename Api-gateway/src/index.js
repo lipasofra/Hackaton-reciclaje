@@ -1,10 +1,12 @@
 const { ApolloServer } = require('apollo-server');
+
 const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 const CiudadanoAPI = require('./dataSources/ciudadano_api');
 const RecicladorAPI = require('./dataSources/reciclador_api');
 const CentroAPI = require('./dataSources/centro_api');
 const AuthAPI = require('./dataSources/auth_api');
+const SegundaAPI = require('./dataSources/segunda_api');
 const authentication = require('./utils/authentication');
 
 const server = new ApolloServer({
@@ -15,6 +17,7 @@ const server = new ApolloServer({
         ciudadanoAPI: new CiudadanoAPI(),
         centroAPI: new CentroAPI(),
         recicladorAPI: new RecicladorAPI(),
+        segundaAPI: new SegundaAPI(),
         authAPI: new AuthAPI(),
     }),
     introspection: true,

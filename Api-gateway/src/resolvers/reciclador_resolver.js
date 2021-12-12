@@ -24,19 +24,7 @@ const recicladorResolver = {
                 return null
 
         },
-    },
-    Mutation: {
-        createReciclador: async (_, { reciclador }, { dataSources, userIdToken }) => {
-            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
-            if (usernameToken)
-                return dataSources.recicladorAPI.createReciclador(reciclador)
-            else
-                return null
-        }
-
-
-
-        }
+    }
     
 };
 module.exports = recicladorResolver;

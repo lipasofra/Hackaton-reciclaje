@@ -12,12 +12,33 @@ const authTypeDefs = gql`
         username: String!
         password: String!
     }
-    input SignUpInput {
+    input SignUpCiudadanoInput {
         username: String!
         password: String!
-        name: String!
+        nombre: String!
+        telefono: String!
         email: String!
-        edad: Int!   
+        zona: String!
+           
+    }
+    input SignUpRecicladorInput {
+        username: String!
+        password: String!
+        nombre: String!
+        telefono: String!
+        email: String!
+        zona: String!
+        material: String!
+           
+    }
+    input SignUpCentroInput {
+        username: String!
+        password: String!
+        direccion: String!
+        telefono: String!
+        zona: String!
+        nombreJefe: String!
+           
     }
     type UserDetail {
         id: Int!
@@ -27,7 +48,9 @@ const authTypeDefs = gql`
         email: String!
     }
     type Mutation {
-        signUpUser(userInput :SignUpInput): Tokens!
+        signUpCiudadano(ciudadanoInput: SignUpCiudadanoInput!): Tokens!
+        signUpReciclador(recicladorInput: SignUpRecicladorInput!): Tokens!
+        signUpCentro(centroInput: SignUpCentroInput!): Tokens!
         logIn(credentials: CredentialsInput!): Tokens!
         refreshToken(refresh: String!): Access!
         }

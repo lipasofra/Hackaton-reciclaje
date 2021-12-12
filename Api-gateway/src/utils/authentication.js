@@ -1,6 +1,7 @@
 const { ApolloError } = require('apollo-server');
 const serverConfig = require('../server');
 const fetch = require('node-fetch');
+
 const authentication = async ({ req }) => {
     const token = req.headers.authorization || '';
     if (token == '')
