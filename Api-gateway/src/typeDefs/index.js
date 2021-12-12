@@ -4,7 +4,8 @@ const ciudadanoTypeDefs = require('./ciudadano_type_defs');
 const recicladorTypeDefs = require('./reciclador_type_defs');
 const authTypeDefs = require('./auth_type_defs');
 const segundaTypeDefs = require('./segunda_type_defs');
+const solicitudesTypeDefs = require('./solicitudes_type_defs');
 //Se unen
-const schemasArrays = [authTypeDefs, centroTypeDefs, ciudadanoTypeDefs, recicladorTypeDefs, segundaTypeDefs];
+const schemasArrays = [authTypeDefs, centroTypeDefs, ciudadanoTypeDefs, recicladorTypeDefs, segundaTypeDefs, solicitudesTypeDefs];
 //Se exportan
 module.exports = schemasArrays;

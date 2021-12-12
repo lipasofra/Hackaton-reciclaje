@@ -18,14 +18,28 @@ public class SolicitudController {
         this.solicitudRepository = solicitudRepository;
     }
 
-    @GetMapping("/listaSolicitudes")
+    @GetMapping("/listasolicitudes")
     List<Solicitud> getSolicitud(){
+
         List<Solicitud> solicitudTodos = solicitudRepository.findAll();
+
         return solicitudTodos;
+    }
+
+    @GetMapping("/solicitudes/{recicladorNombre}")
+    List<Solicitud> recicladorSolicitudes(@PathVariable String recicladorNombre){
+
+        List<Solicitud> solicitudNombre = solicitudRepository.findByReciclador(recicladorNombre);
+
+        return solicitudNombre;
     }
 
     @PostMapping("/solicitud")
     Solicitud newSolicitud(@RequestBody Solicitud solicitud){
+
+        solicitud.setDate(new Date());
+
+
         return solicitudRepository.save(solicitud);
     }
 }
