@@ -8,12 +8,22 @@ public class Solicitud {
     private Ciudadano ciudadanoOrigin;
     private Reciclador recicladorDestiny;
     private Date date;
+    private String reciclador;
 
-    public Solicitud(String id, Ciudadano ciudadanoOrigin, Reciclador recicladorDestiny, Date date) {
+    public Solicitud(String id, Ciudadano ciudadanoOrigin, Reciclador recicladorDestiny, Date date, String reciclador) {
         this.id = id;
         this.ciudadanoOrigin = ciudadanoOrigin;
         this.recicladorDestiny = recicladorDestiny;
         this.date = date;
+        this.reciclador= reciclador;
+    }
+
+    public String getReciclador() {
+        return reciclador;
+    }
+
+    public void setReciclador(String reciclador) {
+        this.reciclador = reciclador;
     }
 
     public String getId() {

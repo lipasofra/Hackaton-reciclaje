@@ -7,6 +7,7 @@ const RecicladorAPI = require('./dataSources/reciclador_api');
 const CentroAPI = require('./dataSources/centro_api');
 const AuthAPI = require('./dataSources/auth_api');
 const SegundaAPI = require('./dataSources/segunda_api');
+const SolicitudesAPI = require('./dataSources/solicitudes_api');
 const authentication = require('./utils/authentication');
 
 const server = new ApolloServer({
@@ -19,6 +20,7 @@ const server = new ApolloServer({
         recicladorAPI: new RecicladorAPI(),
         segundaAPI: new SegundaAPI(),
         authAPI: new AuthAPI(),
+        solicitudAPI: new SolicitudesAPI(),
     }),
     introspection: true,
     playground: true
