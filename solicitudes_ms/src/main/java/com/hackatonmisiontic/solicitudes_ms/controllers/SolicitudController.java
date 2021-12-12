@@ -20,7 +20,9 @@ public class SolicitudController {
 
     @GetMapping("/listaSolicitudes")
     List<Solicitud> getSolicitud(){
+
         List<Solicitud> solicitudTodos = solicitudRepository.findAll();
+
         return solicitudTodos;
     }
 

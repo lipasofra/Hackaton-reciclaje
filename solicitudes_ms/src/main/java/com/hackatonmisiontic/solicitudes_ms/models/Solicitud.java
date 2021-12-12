@@ -5,11 +5,11 @@ import java.util.Date;
 public class Solicitud {
     @Id
     private String id;
-    private String ciudadanoOrigin;
-    private String recicladorDestiny;
+    private Ciudadano ciudadanoOrigin;
+    private Reciclador recicladorDestiny;
     private Date date;
 
-    public Solicitud(String id, String ciudadanoOrigin, String recicladorDestiny, Date date) {
+    public Solicitud(String id, Ciudadano ciudadanoOrigin, Reciclador recicladorDestiny, Date date) {
         this.id = id;
         this.ciudadanoOrigin = ciudadanoOrigin;
         this.recicladorDestiny = recicladorDestiny;
@@ -20,25 +20,30 @@ public class Solicitud {
         return id;
     }
 
-    public String getCiudadanoOrigin() {
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Ciudadano getCiudadanoOrigin() {
         return ciudadanoOrigin;
     }
 
-    public void setCiudadanoOrigin(String ciudadanoOrigin) {
+    public void setCiudadanoOrigin(Ciudadano ciudadanoOrigin) {
         this.ciudadanoOrigin = ciudadanoOrigin;
     }
 
-    public String getRecicladorDestiny() {
+    public Reciclador getRecicladorDestiny() {
         return recicladorDestiny;
     }
 
-    public void setRecicladorDestiny(String recicladorDestiny) {
+    public void setRecicladorDestiny(Reciclador recicladorDestiny) {
         this.recicladorDestiny = recicladorDestiny;
     }
 
     public Date getDate() {
         return date;
     }
+
     public void setDate(Date date) {
         this.date = date;
     }
