@@ -1,0 +1,31 @@
+{
+  "name": "futmatch",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.6",
+    "@vue/apollo-composable": "^4.0.0-alpha.16",
+    "@vue/apollo-option": "^4.0.0-alpha.16",
+    "apollo-link-context": "^1.0.20",
+    "core-js": "^3.6.5",
+    "graphql": "^16.1.0",
+    "graphql-tag": "^2.12.6",
+    "semantic-ui-css": "^2.4.1",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2"
+  }
+}
